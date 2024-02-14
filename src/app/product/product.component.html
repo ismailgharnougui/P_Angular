@@ -1,0 +1,24 @@
+<input type="number"  [(ngModel)]="prixMax">
+<table  class="table">
+  <tr>
+    <th>id</th>
+    <th>title</th>
+    <th>price</th>
+    <th>quantity</th>
+    <th>like</th>
+    <th>Action</th>
+  </tr>
+<tr *ngFor="let item of listProduct , let i=index">
+  <ng-container *ngIf="item.price>prixMax ||prixMax==null ">
+  <td>{{item.id}}</td>
+  <td>{{item.title}}</td>
+  <td>{{item.price}}</td>
+  <td>{{item.quantite}}</td>
+  <td>{{item.like}}</td>
+  <td>
+    <button id="incrementButton" (click)="incrementCounter(i)" class="btn btn-danger">Incrémenter</button>
+    <button id="decrementButton" (click)="decrementButton(i)" [disabled]="item.quantite == 0">Decrémenter</button>  </td>
+  </ng-container>
+</tr>
+
+</table>
