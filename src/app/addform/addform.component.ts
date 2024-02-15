@@ -11,7 +11,7 @@ addForm!:FormGroup;
 ngOnInit() {
   this.addForm = new FormGroup(
     {
-      id: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      id: new FormControl('', Validators.required),
       title: new FormControl('', [Validators.required, Validators.minLength(3)]),
       price: new FormControl('', [Validators.required, Validators.min(0)]),
       quantite: new FormControl('', Validators.required),
