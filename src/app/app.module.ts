@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ProductComponent } from './product/product.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,15 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     HeaderComponent,
     ProductComponent,
     NotfoundComponent,
-    DetailProductComponent
+    DetailProductComponent,
+    ReactiveFormComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
