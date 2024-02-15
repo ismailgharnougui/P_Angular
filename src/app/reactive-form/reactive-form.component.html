@@ -1,5 +1,7 @@
 <p>reactive-form works!</p>
 <label>Login</label>
-<input type="text">
+<input type="text"  [formControl]="login">
 <label> password</label>
-<input type="text">
+<input type="text" [formControl]="pwd">
+
+<input type="submit" value="save"  (click)="save()" [disabled]="login.invalid || pwd.invalid">
