@@ -5,6 +5,7 @@ import {HomeComponent} from "./home/home.component";
 import {NotfoundComponent} from "./notfound/notfound.component";
 import {DetailProductComponent} from "./detail-product/detail-product.component";
 import {ReactiveFormComponent} from "./reactive-form/reactive-form.component";
+import {AddformComponent} from "./addform/addform.component";
 
 const routes: Routes = [
   {path :'' ,redirectTo:'home',pathMatch:"full"},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'home' , component:HomeComponent},
   {path:'product/:id',component:DetailProductComponent},
   {path:'form',component:ReactiveFormComponent},
+  {path:'addproduct',component:AddformComponent},
   {path:'**',component:NotfoundComponent}
 
 ];

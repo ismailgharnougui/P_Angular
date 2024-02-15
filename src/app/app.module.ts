@@ -11,6 +11,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddformComponent } from './addform/addform.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     NotfoundComponent,
     DetailProductComponent,
     ReactiveFormComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddformComponent
   ],
   imports: [
     BrowserModule,

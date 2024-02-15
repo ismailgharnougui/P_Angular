@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, Validators} from "@angular/forms";
+import {Form, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-reactive-form',
@@ -9,6 +9,12 @@ import {FormControl, Validators} from "@angular/forms";
 export class ReactiveFormComponent {
 login=new FormControl('',Validators.required);
   pwd=new FormControl('',Validators.required);
+  Form:FormGroup =new FormGroup(
+    {
+      login:new FormControl('',[Validators.required,Validators.minLength(4)]),
+      pwd:new FormControl('',Validators.required)
+    }
+  );
   save() {
     console.log(this.login.value)
     console.log(this.pwd.value)
