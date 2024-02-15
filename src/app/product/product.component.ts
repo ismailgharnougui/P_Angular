@@ -35,6 +35,5 @@ export class ProductComponent  //implements OnInit{
   }
 
 
-
-
-}
+    protected readonly product = product;
+  }

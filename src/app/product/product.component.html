@@ -16,9 +16,12 @@
   <td>{{item.quantite}}</td>
   <td>{{item.like}}</td>
   <td>
-    <button id="incrementButton" (click)="incrementCounter(i)" class="btn btn-danger">Incrémenter</button>
-    <button id="decrementButton" (click)="decrementButton(i)" [disabled]="item.quantite == 0">Decrémenter</button>  </td>
+    <button type="button" class="btn btn-primary" (click)="incrementCounter(i)">Incrémenter</button>
+    <button type="button" class="btn btn-primary" (click)="decrementButton(i)" [disabled]="item.quantite == 0">Decrémenter</button>
+    <button type="button" class="btn btn-primary" [routerLink]="['/product',item.id] " >Details </button>
+  </td>
   </ng-container>
+
 </tr>
 
 </table>
